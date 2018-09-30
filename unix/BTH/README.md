@@ -23,9 +23,9 @@ To install an updated core code release, update the following code within the re
 
 ```
 # Get Bitcoin Repo
-wget https://github.com/BTHPOS/BTH/archive/v0.15.1.zip
-unzip v0.15.1.zip
-rm -rf v0.15.1.zip
+wget https://github.com/BTHPOS/BTH/archive/v0.18.0.zip
+unzip v0.18.0.zip
+rm -rf v0.18.0.zip
 ```
 
 # Potential Issues
