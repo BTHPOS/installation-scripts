@@ -57,7 +57,7 @@ rm -rf v0.18.0.zip
 cd BTH-0.18.0
 
 # Install Berkeleydb 4.8
-/bin/sh /$1/bitcoin-installation-script/berkeleydb-installation.sh `pwd`
+/bin/sh /$1/installation-scripts/unix/BTH/berkeleydb-installation.sh `pwd`
 
 # # Build
 ./autogen.sh

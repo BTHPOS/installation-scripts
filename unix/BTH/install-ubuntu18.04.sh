@@ -52,15 +52,15 @@ rm -rf v0.18.0.zip
 cd BTH-0.18.0
 
 # Install Berkeleydb 4.8
-/bin/sh /$1/bitcoin-installation-script/berkeleydb-installation.sh `pwd`
+/bin/sh /$1/installation-scripts/unix/BTH/berkeleydb-installation.sh `pwd`
 
 # Install Berkleydb Dependency
 sudo apt-get install libdb++-dev -y
 
 # # Build
 ./autogen.sh
-export BDB_PREFIX=/$1/bitcoin-installation-script/BTH-0.18.0/db4
-./configure --prefix=/$1/bitcoin-installation-script/BTH-0.18.0/depends/x86_64-pc-linux-gnu/ BDB_LIBS="-L${BDB_PREFIX}/lib -ldb_cxx-5.3" BDB_CFLAGS="-I${BDB_PREFIX}/include" --enable-cxx --disable-shared --with-pic
+export BDB_PREFIX=/$1/BTH-0.18.0/db4
+./configure --prefix=/$1/BTH-0.18.0/depends/x86_64-pc-linux-gnu/ BDB_LIBS="-L${BDB_PREFIX}/lib -ldb_cxx-5.3" BDB_CFLAGS="-I${BDB_PREFIX}/include" --enable-cxx --disable-shared --with-pic
 make
 
 cd ..
