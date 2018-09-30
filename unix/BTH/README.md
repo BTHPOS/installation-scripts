@@ -6,16 +6,16 @@ PLEASE NOTE: Feel free to submit a pull request if you have any issues with an i
 
 # Run Installation
 
-To run an installation, execute the file with the prefix "install-" for your os version.
+To run an installation, execute the file with the prefix "install-" for your os version. Specify the directory in which you would like to install BTH. Make sure that you do not include a leading and trailing slash
 
 ```shell
-$ ./install-ubuntu18.04.sh
+$ ./install-ubuntu18.04.sh home/ubuntu
 ```
 
 If you have issues running any install script, make sure it is executable. You can make a shell script executable by running the following command.
 
 ```shell
-$ chmod +x ./install-ubuntu18.04.sh
+$ chmod +x ./install-ubuntu18.04.sh home/ubuntu
 ```
 
 # Install an updated core code release
