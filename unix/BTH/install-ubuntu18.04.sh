@@ -57,8 +57,8 @@ cd BTH-$VERSION
 # Install Berkeleydb 4.8
 /bin/sh /$1/installation-scripts/unix/BTH/berkeleydb-installation.sh `pwd`
 
-# Install Berkleydb Dependency
-sudo apt-get install libdb++-dev -y
+# Install Berkleydb Dependency (5.3)
+# sudo apt-get install libdb++-dev -y
 
 # # Build
 ./autogen.sh
