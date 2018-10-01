@@ -63,7 +63,7 @@ cd BTH-$VERSION
 # # Build
 ./autogen.sh
 export BDB_PREFIX=/$1/BTH-$VERSION/db4
-./configure --prefix=/$1/BTH-$VERSION/depends/x86_64-pc-linux-gnu/ BDB_LIBS="-L${BDB_PREFIX}/lib -ldb_cxx-5.3" BDB_CFLAGS="-I${BDB_PREFIX}/include" --enable-cxx --disable-shared --with-pic
+./configure --prefix=/$1/BTH-$VERSION/depends/x86_64-pc-linux-gnu/ BDB_LIBS="-L${BDB_PREFIX}/lib -ldb_cxx-4.8" BDB_CFLAGS="-I${BDB_PREFIX}/include" --enable-cxx --disable-shared --with-pic
 make
 
 cd ..
