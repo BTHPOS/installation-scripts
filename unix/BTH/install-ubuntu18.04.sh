@@ -2,7 +2,7 @@
 cd /$1
 echo /$1;
 
-VERSION=0.18.1
+VERSION=0.18.2
 echo "Installing version {$VERSION}"
 
 # Update system
