@@ -15,17 +15,14 @@ $ ./install-ubuntu18.04.sh home/ubuntu
 If you have issues running any install script, make sure it is executable. You can make a shell script executable by running the following command.
 
 ```shell
-$ chmod +x ./install-ubuntu18.04.sh home/ubuntu
+$ chmod +x ./install-ubuntu18.04.sh
 ```
 
 # Install an updated core code release
 To install an updated core code release, update the following code within the relevant install script, to reflect the location of the release's zipped code.
 
 ```
-# Get Bitcoin Repo
-wget https://github.com/BTHPOS/BTH/archive/v0.18.0.zip
-unzip v0.18.0.zip
-rm -rf v0.18.0.zip
+VERSION=0.18.1
 ```
 
 # Potential Issues
