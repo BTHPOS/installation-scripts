@@ -2,7 +2,7 @@
 cd /$1
 echo /$1;
 
-VERSION=0.18.3
+VERSION=0.18.4
 echo "Installing version {$VERSION}"
 
 # Update source endpoints (Only for older version of Ubuntu e.g. 15.10)
