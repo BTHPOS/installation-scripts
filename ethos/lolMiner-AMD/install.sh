@@ -22,9 +22,9 @@ rm -rf /opt/miners/lolMiner > /dev/null
 sudo mv lolMiner /opt/miners/
 
 # Backup the current custom configuration
-mv ~/custom.sh ~/custom.sh.disabled
+mv ~/custom.sh ~/custom.sh.disabled > /dev/null
 
 # Move the new config to the home directory
-cp ./lolMiner.conf ~/lolMiner.conf 
+cp ./lolMiner.conf ~/lolMiner.conf
 cp ./custom.sh ~/custom.sh
 chmod +x ~/custom.sh
