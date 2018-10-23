@@ -25,5 +25,6 @@ sudo mv lolMiner /opt/miners/
 mv ~/custom.sh ~/custom.sh.disabled
 
 # Move the new config to the home directory
+cp ./lolMiner.conf ~/lolMiner.conf 
 cp ./custom.sh ~/custom.sh
 chmod +x ~/custom.sh
