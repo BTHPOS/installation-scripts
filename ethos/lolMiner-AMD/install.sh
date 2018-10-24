@@ -7,7 +7,7 @@
 # lolMiner natively in EthOS (i.e. being able to modify the Parameters
 # within local.conf)
 #
-$build=lolMiner_v05_Lin64.tar.gz
+lolminerbuild=lolMiner_v05_Lin64.tar.gz
 
 # Stop any current mining
 minestop
@@ -17,7 +17,7 @@ git clone https://github.com/BTHPOS/mining-amd-lolminer.git
 
 # Remove the files that we don't need
 mkdir lolminer
-tar -xvzf mining-amd-lolminer/builds/$build -C lolminer
+tar -xvzf mining-amd-lolminer/builds/$lolminerbuild -C lolminer
 rm -rf lolminer/user_config.json
 rm -rf lolminer/run_miner_with_restart.sh
 rm -rf lolminer/run_miner.sh.sh
