@@ -30,4 +30,4 @@ if [ ! -d "/opt/miners/lolminer" ]; then
 fi
 
 # Move the lolMiner build to where the rest of the miners are
-sudo mv lolMiner /opt/miners/
+sudo mv lolminer /opt/miners/
