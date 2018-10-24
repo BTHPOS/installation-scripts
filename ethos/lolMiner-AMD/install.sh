@@ -3,7 +3,9 @@
 #########################################
 
 #
-# MUST HAVE EthOS 1.3.3 or higher  
+# MUST HAVE EthOS 1.3.3 or higher  in order to run
+# lolMiner natively in EthOS (i.e. being able to modify the Parameters
+# within local.conf)
 #
 $build=lolMiner_v05_Lin64.tar.gz
 
