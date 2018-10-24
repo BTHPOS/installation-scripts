@@ -25,6 +25,7 @@ rm -rf lolMiner/run_benchmark.sh.sh
 rm -rf mining-amd-lolminer
 
 if [ ! -d "/opt/miners/lolMiner" ]; then
+  echo "lolMiner already exists. Backing up and replacing"
   mv /opt/miners/lolMiner /opt/miners/lolMiner.BAK
 fi
 
