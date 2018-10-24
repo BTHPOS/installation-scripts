@@ -24,7 +24,7 @@ rm -rf lolminer/run_miner.sh.sh
 rm -rf lolminer/run_benchmark.sh.sh
 rm -rf mining-amd-lolminer
 
-if [ ! -d "/opt/miners/lolminer" ]; then
+if [ -d "/opt/miners/lolminer" ]; then
   echo "lolminer already exists. Backing up and replacing"
   sudo mv /opt/miners/lolminer /opt/miners/lolminer.BAK
 fi
