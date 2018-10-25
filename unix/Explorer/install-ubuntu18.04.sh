@@ -67,7 +67,7 @@ cat <<EOT >> ./settings.json
 
   // wallet settings
   "wallet": {
-    "host": "localhost",
+    "host": "node1-testnet.bithereum.network",
     "port": 8332,
     "user": "bithereum",
     "pass": "bithereum"
