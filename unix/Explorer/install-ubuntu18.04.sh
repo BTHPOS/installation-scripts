@@ -14,7 +14,7 @@ sudo apt-get install -y mongodb-org
 sudo apt-get install libkrb5-dev -y
 
 # Fetch explorer code
-git clone https://github.com/dondreytaylor/iquidus-btg.git explorer
+git clone https://github.com/BTHPOS/explorer-iquidus.git explorer
 cd explorer && npm install
 
 # Create settings file
@@ -28,7 +28,7 @@ cat <<EOT >> ./settings.json
   // name your instance!
   "title": "Bithereum Explorer",
 
-  "address": "testnet-explorer.bithereum.network:3001",
+  "address": "testnet-explorer.bithereum.network",
 
   // coin name
   "coin": "Bithereum",
@@ -37,7 +37,7 @@ cat <<EOT >> ./settings.json
   "symbol": "BTH",
 
   // logo
-  "logo": "/images/bgold.jpg",
+  "logo": "https://bithereum.network/assets/img/bithereum-logo.png",
 
   // favicon
   "favicon": "public/favicon.ico",
@@ -50,7 +50,7 @@ cat <<EOT >> ./settings.json
   "theme": "Lumen",
 
   // port to listen for requests on.
-  "port" : 3001,
+  "port" : 80,
 
   // database settings (MongoDB)
   "dbsettings": {
@@ -69,8 +69,8 @@ cat <<EOT >> ./settings.json
   "wallet": {
     "host": "localhost",
     "port": 8332,
-    "user": "bitcoingold",
-    "pass": "bitcoingold"
+    "user": "bithereum",
+    "pass": "bithereum"
   },
 
   // confirmations
@@ -82,8 +82,8 @@ cat <<EOT >> ./settings.json
   // menu settings
   "display": {
     "api": true,
-    "markets": true,
-    "richlist": true,
+    "markets": false,
+    "richlist": false,
     "twitter": false,
     "facebook": false,
     "googleplus": false,
@@ -111,7 +111,7 @@ cat <<EOT >> ./settings.json
   //supported markets: bittrex, poloniex, yobit, empoex, bleutrade, cryptopia, ccex
   //default market is loaded by default and determines last price in header
   "markets": {
-    "coin": "BTG",
+    "coin": "BTH",
     "exchange": "USD",
     "enabled": ["yobit"],
     "cryptopia_id": "1658",
@@ -136,9 +136,9 @@ cat <<EOT >> ./settings.json
   },
 
   // twitter, facebook, googleplus
-  "twitter": "bitcoingold",
-  "facebook": "btcgpu",
-  "googleplus": "yourgooglepluspage",
+  "twitter": "BithereumBTH",
+  "facebook": "BithereumBTH",
+  "googleplus": "",
 
   //genesis
   "genesis_tx": "",
