@@ -187,4 +187,4 @@ cd ..
 mv explorer ../
 cd ..
 
-service mongod start
+sudo service mongod start
