@@ -8,6 +8,12 @@ echo "Installing version latest"
 # Update system
 sudo apt-get update -y
 
+# Install Berkeleydb 4.8
+/bin/sh ~/installation-scripts/unix/BTH/berkeleydb-installation.sh `pwd`
+
+# Install Berkleydb Dependency (5.3)
+# sudo apt-get install libdb++-dev -y
+
 # Install git
 sudo apt-get install git -y
 
@@ -29,7 +35,6 @@ sudo apt-get install automake pkg-config bsdmainutils python3 -y
 # Libx11
 sudo apt-get install libx11-xcb-dev libfontconfig-dev -y
 
-
 # Install Libsodium
 wget https://download.libsodium.org/libsodium/releases/LATEST.tar.gz
 tar -xf LATEST.tar.gz
@@ -47,23 +52,17 @@ sudo apt-get install unzip -y
 
 # Get Bitcoin Repo
 cd /$1
-git clone https://github.com/BTHPOS/BTH.git
+git clone https://github.com/BTHPOS/BTH.git BTH-latest
 
 # Go into Bitcoin Directory
-cd BTH
-
-# Install Berkeleydb 4.8
-/bin/sh /$1/installation-scripts/unix/BTH/berkeleydb-installation.sh `pwd`
-
-# Install Berkleydb Dependency (5.3)
-# sudo apt-get install libdb++-dev -y
+cd BTH-latest
 
 # # Build
 ./autogen.sh
-export BDB_PREFIX=/$1/BTH/db4
-./configure --prefix=/$1/BTH/depends/x86_64-pc-linux-gnu/ BDB_LIBS="-L${BDB_PREFIX}/lib -ldb_cxx-4.8" BDB_CFLAGS="-I${BDB_PREFIX}/include" --enable-cxx --disable-shared --with-pic
+export BDB_PREFIX=/$1/BTH-latest/db4
+./configure --prefix=/$1/BTH-latest/depends/x86_64-pc-linux-gnu/ BDB_LIBS="-L${BDB_PREFIX}/lib -ldb_cxx-4.8" BDB_CFLAGS="-I${BDB_PREFIX}/include" --enable-cxx --disable-shared --with-pic
 make
 
 cd ..
-mv BTH /$1
+mv BTH-latest /$1
 cd /$1
