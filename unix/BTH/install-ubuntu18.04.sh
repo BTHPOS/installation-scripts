@@ -11,6 +11,12 @@ sudo apt-get update -y
 # Install git
 sudo apt-get install git -y
 
+# Install Berkeleydb 4.8
+/bin/sh ~/installation-scripts/unix/BTH/berkeleydb-installation.sh `pwd`
+
+# Install Berkleydb Dependency (5.3)
+# sudo apt-get install libdb++-dev -y
+
 # boostlib
 sudo apt-get install libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev -y
 
@@ -53,12 +59,6 @@ rm -rf v$VERSION.zip
 
 # Go into Bitcoin Directory
 cd BTH-$VERSION
-
-# Install Berkeleydb 4.8
-/bin/sh /$1/installation-scripts/unix/BTH/berkeleydb-installation.sh `pwd`
-
-# Install Berkleydb Dependency (5.3)
-# sudo apt-get install libdb++-dev -y
 
 # # Build
 ./autogen.sh
