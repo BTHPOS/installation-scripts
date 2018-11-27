@@ -60,7 +60,7 @@ rm -rf v$VERSION.zip
 cd BTH-$VERSION
 
 # Install Berkeleydb 4.8
-/bin/sh /$1/installation-scripts/unix/BTH/berkeleydb-installation.sh `pwd`
+/bin/sh ~/installation-scripts/unix/BTH/berkeleydb-installation.sh `pwd`
 
 # # Build
 ./autogen.sh
