@@ -8,12 +8,6 @@ echo "Installing version latest"
 # Update system
 sudo apt-get update -y
 
-# Install Berkeleydb 4.8
-/bin/sh ~/installation-scripts/unix/BTH/berkeleydb-installation.sh `pwd`
-
-# Install Berkleydb Dependency (5.3)
-# sudo apt-get install libdb++-dev -y
-
 # Install git
 sudo apt-get install git -y
 
@@ -56,6 +50,12 @@ git clone https://github.com/BTHPOS/BTH.git BTH-latest
 
 # Go into Bitcoin Directory
 cd BTH-latest
+
+# Install Berkeleydb 4.8
+/bin/sh ~/installation-scripts/unix/BTH/berkeleydb-installation.sh `pwd`
+
+# Install Berkleydb Dependency (5.3)
+# sudo apt-get install libdb++-dev -y
 
 # # Build
 ./autogen.sh
