@@ -52,7 +52,8 @@ git clone https://github.com/BTHPOS/BTH.git BTH-latest
 cd BTH-latest
 
 # Install Berkeleydb 4.8
-/bin/sh ~/installation-scripts/unix/BTH/berkeleydb-installation.sh `pwd`
+chmod +x ~/installation-scripts/unix/BTH/berkeleydb-installation.sh 
+~/installation-scripts/unix/BTH/berkeleydb-installation.sh /$1/BTH-latest/
 
 # Install Berkleydb Dependency (5.3)
 # sudo apt-get install libdb++-dev -y
