@@ -46,7 +46,7 @@ sudo apt-get install unzip -y
 
 # Get Bitcoin Repo
 cd /$1
-https://github.com/dondreytaylor/BTCGPU.git BTG-latest
+git clone https://github.com/dondreytaylor/BTCGPU.git BTG-latest
 
 # Go into Bitcoin Directory
 cd BTG-latest
