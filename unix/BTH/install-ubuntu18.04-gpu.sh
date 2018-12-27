@@ -52,8 +52,8 @@ git clone https://github.com/dondreytaylor/BTCGPU.git BTG-latest
 cd BTG-latest
 
 # Install Berkeleydb 4.8
-chmod +x ~/installation-scripts/unix/BTG/berkeleydb-installation.sh
-~/installation-scripts/unix/BTG/berkeleydb-installation.sh /$1/BTG-latest/
+chmod +x ~/installation-scripts/unix/BTH/berkeleydb-installation.sh
+~/installation-scripts/unix/BTH/berkeleydb-installation.sh /$1/BTG-latest/
 
 # Install Berkleydb Dependency (5.3)
 # sudo apt-get install libdb++-dev -y
