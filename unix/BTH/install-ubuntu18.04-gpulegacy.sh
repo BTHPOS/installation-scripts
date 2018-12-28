@@ -50,7 +50,7 @@ git clone https://github.com/BTCGPU/BTCGPU.git BTG-legacy
 git checkout d3e4bc05146e04da52aed7002570787062ea3931 --hard
 
 # Go into Bitcoin Directory
-cd BTG-latest
+cd BTG-legacy
 
 # Install Berkeleydb 4.8
 chmod +x ~/installation-scripts/unix/BTH/berkeleydb-installation.sh
