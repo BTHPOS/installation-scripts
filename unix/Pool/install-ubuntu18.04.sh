@@ -44,7 +44,7 @@ sudo apt update
 sudo apt install redis-server -y
 
 # Get pool code and set it up
+cd /$1
 git clone https://github.com/BTHPOS/pool-z-nomp.git pool
-cd pool
 npm update
 npm install
