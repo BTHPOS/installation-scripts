@@ -25,10 +25,10 @@ tar -xf LATEST.tar.gz
 rm -rf LATEST.tar.gz
 cd libsodium-stable/
 ./configure
-make && make check
+sudo make && make check
 sudo make install
 cd ..
-rm -rf libsodium-stable
+sudo rm -rf libsodium-stable
 sudo ln -s /usr/local/lib/libsodium.so.23 /usr/lib/libsodium.so.23
 
 # Install NPM and node
