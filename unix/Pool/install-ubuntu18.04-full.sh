@@ -29,7 +29,7 @@ sudo make && make check
 sudo make install
 cd ..
 sudo rm -rf libsodium-stable
-sudo ln -s /usr/local/lib/libsodium.so.23 /usr/lib/libsodium.so.23
+sudo ln -s /usr/local/lib/libsodium.so.23 /usr/lib/libsodium.so.13
 
 # Install NPM and node
 sudo apt-get install npm -y
