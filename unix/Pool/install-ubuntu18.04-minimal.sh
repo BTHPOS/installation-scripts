@@ -15,7 +15,7 @@ sudo ln -s /usr/local/lib/libsodium.so.23 /usr/lib/libsodium.so.13
 
 # Install NPM and node
 sudo apt-get install npm -y
-sudo npm install n -g -y
+sudo npm install n -g
 sudo n v7
 
 # Update system
