@@ -1,3 +1,6 @@
+# Start in the home directory
+cd ~/
+
 # Installation for Ubuntu 18.04
 sudo apt-get update -y
 sudo apt-get install npm -y
@@ -182,9 +185,7 @@ cat <<EOT >> ./settings.json
 }
 EOT
 
-
-cd ..
-mv explorer ../
-cd ..
-
+cd ~/
+mv explorer ~/
 sudo service mongod start
+
