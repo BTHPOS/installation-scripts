@@ -28,7 +28,7 @@ cat <<EOT >> ./settings.json
   // name your instance!
   "title": "Bithereum Explorer",
 
-  "address": "testnet-explorer.bithereum.network",
+  "address": "explorer.bithereum.network",
 
   // coin name
   "coin": "Bithereum",
