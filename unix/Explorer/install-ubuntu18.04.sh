@@ -185,7 +185,5 @@ cat <<EOT >> ./settings.json
 }
 EOT
 
-cd ~/
-mv explorer ~/
 sudo service mongod start
 
