@@ -6,6 +6,8 @@ sudo apt install nsis -y
 
 # Set the default mingw32 g++ compiler option to posix.
 sudo apt install g++-mingw-w64-i686 mingw-w64-i686-dev -y
+sudo update-alternatives --config i686-w64-mingw32-g++
+
 
 # Lib boost
 sudo apt-get install libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev -y
