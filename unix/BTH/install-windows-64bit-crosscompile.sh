@@ -23,7 +23,7 @@ sudo apt-get install automake pkg-config bsdmainutils python3 -y
 sudo apt-get install libx11-xcb-dev libfontconfig-dev -y
 
 # Set the default mingw32 g++ compiler option to posix.
-sudo update-alternatives --config x86_64-w64-mingw32-g++ -y
+sudo apt install g++-mingw-w64-x86-64 -y
 
 # Install BerkelyDB
 sudo apt-get install software-properties-common -y
@@ -49,5 +49,5 @@ make HOST=x86_64-w64-mingw32
 cd ..
 ./autogen.sh
 CONFIG_SITE=$PWD/depends/x86_64-w64-mingw32/share/config.site ./configure --prefix=/
-make
+make -j
 make deploy
