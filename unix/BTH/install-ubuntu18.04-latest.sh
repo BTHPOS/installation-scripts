@@ -2,7 +2,6 @@
 cd /$1
 echo /$1;
 
-VERSION=0.18.5
 echo "Installing version latest"
 
 # Update system
