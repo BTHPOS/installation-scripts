@@ -58,6 +58,11 @@ chmod +x ~/installation-scripts/unix/BTH/berkeleydb-installation.sh
 # Install Berkleydb Dependency (5.3)
 # sudo apt-get install libdb++-dev -y
 
+# Build dependencies
+cd depends
+make 
+cd ..
+
 # # Build
 ./autogen.sh
 export BDB_PREFIX=/$1/BTH-dondrey/db4
