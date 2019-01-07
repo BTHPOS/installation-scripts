@@ -1,14 +1,13 @@
-# Bitcoin Installation Script
-cd /$1
-echo /$1;
-
-VERSION=0.18.5
-echo "Installing version {$VERSION}"
-
 # Update source endpoints (Only for older version of Ubuntu e.g. 15.10)
 sudo cp /etc/apt/sources.list /etc/apt/sources.list.backup
 sudo sed -i -e 's/us.archive/old-releases/g' /etc/apt/sources.list
 sudo sed -i -e 's/security.ubuntu/old-releases.ubuntu/g' /etc/apt/sources.list
+
+# Bitcoin Installation Script
+cd /$1
+echo /$1;
+
+echo "Installing version latest"
 
 # Update system
 sudo apt-get update -y
@@ -34,7 +33,6 @@ sudo apt-get install automake pkg-config bsdmainutils python3 -y
 # Libx11
 sudo apt-get install libx11-xcb-dev libfontconfig-dev -y
 
-
 # Install Libsodium
 wget https://download.libsodium.org/libsodium/releases/LATEST.tar.gz
 tar -xf LATEST.tar.gz
@@ -51,23 +49,26 @@ sudo ln -s /usr/local/lib/libsodium.so.23 /usr/lib/libsodium.so.23
 sudo apt-get install unzip -y
 
 # Get Bitcoin Repo
-cd /$1/
-wget https://github.com/BTHPOS/BTH/archive/v$VERSION.zip
-unzip v$VERSION.zip
-rm -rf v$VERSION.zip
+cd /$1
+git clone https://github.com/BTHPOS/BTH.git BTH-latest
 
 # Go into Bitcoin Directory
-cd BTH-$VERSION
+cd BTH-latest
 
 # Install Berkeleydb 4.8
-/bin/sh ~/installation-scripts/unix/BTH/berkeleydb-installation.sh `pwd`
+chmod +x ~/installation-scripts/unix/BTH/berkeleydb-installation.sh 
+~/installation-scripts/unix/BTH/berkeleydb-installation.sh /$1/BTH-latest/
+
+# Install Berkleydb Dependency (5.3)
+# sudo apt-get install libdb++-dev -y
 
 # # Build
 ./autogen.sh
-export BDB_PREFIX=/$1/BTH-$VERSION/db4
-./configure --prefix=/$1/BTH-$VERSION/depends/x86_64-pc-linux-gnu/ BDB_LIBS="-L${BDB_PREFIX}/lib -ldb_cxx-4.8" BDB_CFLAGS="-I${BDB_PREFIX}/include" --enable-cxx --disable-shared --with-pic
+export BDB_PREFIX=/$1/BTH-latest/db4
+./configure --prefix=/$1/BTH-latest/depends/x86_64-pc-linux-gnu/ BDB_LIBS="-L${BDB_PREFIX}/lib -ldb_cxx-4.8" BDB_CFLAGS="-I${BDB_PREFIX}/include" --enable-cxx --disable-shared --with-pic
 make
 
 cd ..
-mv BTH-$VERSION /$1
+mv BTH-latest /$1
 cd /$1
+
