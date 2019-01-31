@@ -1,6 +1,9 @@
 # Update system
 sudo apt-get update
 
+# Install Libboost 
+sudo apt-get install libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev -y
+
 # Install Libsodium
 wget https://download.libsodium.org/libsodium/releases/LATEST.tar.gz
 tar -xf LATEST.tar.gz
