@@ -1,7 +1,7 @@
  #!/bin/bash  
  
 # Bithereum Installation Script
-BASE=`~`
+BASE=~
 echo $BASE;
 
 echo "Installing version latest"
