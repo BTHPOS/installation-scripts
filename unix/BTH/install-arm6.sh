@@ -67,7 +67,7 @@ cd ..
 # # Build
 ./autogen.sh
 export BDB_PREFIX=/$BASE/BTH-latest/db4
-./configure --prefix=/$BASE/BTH-latest/depends/x86_64-pc-linux-gnu/ BDB_LIBS="-L${BDB_PREFIX}/lib -ldb_cxx-4.8" BDB_CFLAGS="-I${BDB_PREFIX}/include" --enable-cxx --disable-shared --with-pic CXXFLAGS=" --param ggc-min-expand=1 --param ggc-min-heapsize=4096"
+./configure --prefix=/$BASE/BTH-latest/depends/x86_64-pc-linux-gnu/ BDB_LIBS="-L${BDB_PREFIX}/lib -ldb_cxx-4.8" BDB_CFLAGS="-I${BDB_PREFIX}/include" --enable-cxx --disable-shared --with-pic --disable-tests CXXFLAGS=" --param ggc-min-expand=1 --param ggc-min-heapsize=32768"
 make
 
 cd ..
