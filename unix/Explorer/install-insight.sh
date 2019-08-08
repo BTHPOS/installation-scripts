@@ -12,6 +12,7 @@ nvm install v4
 
 ## Dependencies
 sudo apt-get install build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils libsodium-dev -y
+sudo apt-get install libssl-dev libevent-dev libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-test-dev libboost-thread-dev
 sudo apt-get install python -y
 sudo apt-get install libboost-all-dev -y
 sudo apt-get install libzmq3-dev -y
